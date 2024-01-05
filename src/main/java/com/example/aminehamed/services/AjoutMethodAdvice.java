@@ -9,14 +9,9 @@ import org.springframework.stereotype.Component;
 @Component
 public class AjoutMethodAdvice {
 
-    @AfterReturning("execution(* com.example.aminehamed.services.trajetServiceImpl.addTrajet(com.example.aminehamed.entities.Trajet))")
-
+    @AfterReturning("execution(* com.example.aminehamed.services.WorkerServiceImpl.addVehicleReservationAndAffectToWashingService(..))")
     public void logAfterAddMethod() {
-        System.out.println("c'est une méthode d'ajout");
-    }
-    @AfterReturning("execution(* com.example.aminehamed.services.IuserService.addStudent(com.example.aminehamed.entities.Utilisateur))")
-    public void logAfterAddStudent() {
-        System.out.println("c'est une méthode d'ajout d'étudiant");
+        System.out.println("Waiting for a worker...");
     }
 
 
